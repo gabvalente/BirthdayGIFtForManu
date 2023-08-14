@@ -10,6 +10,14 @@ async function generatePoemForManu() {
     Não use palavras que possam ser ofensivas ou que possam ser interpretadas como ofensivas.
     Seja criativo e coerente.
     Utilize um emoji pertinente ao final de cada estrofe.
+    Eis aqui algumas palavras que rimam com Manuela: 
+    Cinderela
+    Aquarela
+    Canela
+    Janela
+    Donzela
+    Caravela
+    Vela (de aniversário)
     `;
 
 
