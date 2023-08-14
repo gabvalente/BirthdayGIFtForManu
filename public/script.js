@@ -6,7 +6,12 @@ async function generatePoemForManu() {
     Ela é filha de Rodrigo e Amanda, tem um irmão chamado Rafael e nasceu em 08 de Agosto de 2016 às 13h08min. 
     Manuela é inteligente, adora os filmes Frozen e Encanto da Disney, ama a natureza, os animais e brincar com seus amigos. 
     O poema deve ser amigável, ter no máximo 300 caracteres e destacar suas qualidades de criança.
-    Evite palavras difíceis e mantenha o tom do poema alegre e divertido.`;
+    Evite palavras difíceis e mantenha o tom do poema alegre e divertido.
+    Não use palavras que possam ser ofensivas ou que possam ser interpretadas como ofensivas.
+    Você pode usar emojis, mas não use mais de 3 emojis por poema.
+    `;
+
+
 
     try {
         const poem = await fetchOpenAI(promptMessage);
@@ -19,7 +24,7 @@ async function generatePoemForManu() {
 
 
 async function fetchOpenAI(message) {
-    const response = await fetch('api/ask-openai', {
+    const response = await fetch('/api/ask-openai', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

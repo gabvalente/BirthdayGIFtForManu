@@ -8,6 +8,7 @@ module.exports = async (req, res) => {
 
     try {
         const openaiResponse = await axios.post('https://api.openai.com/v1/chat/completions', {
+            model: 'gpt-3.5-turbo',
             messages: [
                 {role: "system", content: "You are a helpful Brazilian poet assistant."},
                 {role: "user", content: userMessage}
