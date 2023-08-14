@@ -8,7 +8,8 @@ async function generatePoemForManu() {
     O poema deve ser amigável, ter no máximo 300 caracteres e destacar suas qualidades de criança.
     Evite palavras difíceis e mantenha o tom do poema alegre e divertido.
     Não use palavras que possam ser ofensivas ou que possam ser interpretadas como ofensivas.
-    Você pode usar emojis..
+    Seja criativo e coerente.
+    Utilize um emoji pertinente ao final de cada estrofe.
     `;
 
 
