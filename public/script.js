@@ -19,7 +19,7 @@ async function generatePoemForManu() {
 
 
 async function fetchOpenAI(message) {
-    const response = await fetch('/ask-openai', {
+    const response = await fetch('api/ask-openai', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
