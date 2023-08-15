@@ -2,7 +2,7 @@ const poemButton = document.getElementById('generate-poem-button');
 const poemOutput = document.getElementById('poem-output');
 
 async function generatePoemForManu() {
-    const promptMessage = `Escreva um poema curto com rimas em português do Brasil para Manuela, uma criança que completou 7 anos em 8 de Agosto de 2023. 
+    const promptMessage = `Escreva um poema lírico com rimas em português do Brasil para Manuela, uma criança que completou 7 anos em 8 de Agosto de 2023. 
     Ela é filha de Rodrigo e Amanda, tem um irmão mais novo chamado Rafael e nasceu em 08 de Agosto de 2016 às 13h08min. 
     Manuela é inteligente, adora os filmes Frozen e Encanto da Disney, ama a natureza, os animais e brincar com seus amigos. 
     O poema deve ser amigável, ter no máximo 300 caracteres e destacar suas qualidades de criança.
