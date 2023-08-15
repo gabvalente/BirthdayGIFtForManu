@@ -18,7 +18,6 @@ async function generatePoemForManu() {
     Janela
     Donzela
     Caravela
-    Vela (de aniversário)
     `;
 
 
