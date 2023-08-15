@@ -3,13 +3,12 @@ const poemOutput = document.getElementById('poem-output');
 
 async function generatePoemForManu() {
     const promptMessage = `Escreva um poema curto com rimas em português do Brasil para Manuela, uma criança que completou 7 anos em 8 de Agosto de 2023. 
-    Ela é filha de Rodrigo e Amanda, tem um irmão chamado Rafael e nasceu em 08 de Agosto de 2016 às 13h08min. 
+    Ela é filha de Rodrigo e Amanda, tem um irmão mais novo chamado Rafael e nasceu em 08 de Agosto de 2016 às 13h08min. 
     Manuela é inteligente, adora os filmes Frozen e Encanto da Disney, ama a natureza, os animais e brincar com seus amigos. 
     O poema deve ser amigável, ter no máximo 300 caracteres e destacar suas qualidades de criança.
     Evite palavras difíceis e mantenha o tom do poema alegre e divertido.
     Não use palavras que possam ser ofensivas ou que possam ser interpretadas como ofensivas.
     Seja criativo e coerente.
-    Utilize um emoji pertinente ao final de cada estrofe.
     Eis aqui algumas palavras que rimam com Manuela, que podem ser usadas no poema: 
     Cinderela
     Singela
@@ -20,17 +19,13 @@ async function generatePoemForManu() {
     Caravela
     `;
 
-
-
     try {
-        const poem = await fetchOpenAI(promptMessage);
-        poemOutput.textContent = poem;
+        poemOutput.textContent = await fetchOpenAI(promptMessage);
     } catch (error) {
         console.error("Error generating poem:", error);
         poemOutput.innerHTML = `<p>Error: ${error.message}</p>`;
     }
 }
-
 
 async function fetchOpenAI(message) {
     const response = await fetch('/api/ask-openai', {
@@ -52,7 +47,6 @@ async function fetchOpenAI(message) {
 poemButton.addEventListener('click', function() {
     generatePoemForManu()
         .then(() => {
-            console.log("Poem generated successfully");
         })
         .catch(error => {
             console.error("Error generating poem:", error);
